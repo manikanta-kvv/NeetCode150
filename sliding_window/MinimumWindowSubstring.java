@@ -55,10 +55,7 @@ public class MinimumWindowSubstring {
 
         }
         System.out.println("Min Length : " + minLen);
-        if (minLen == Integer.MAX_VALUE) {
-            return "";  // No valid window was found
-        }
-        return s.substring(indices[0], indices[1] + 1);
+        return minLen > s.length() ? "" : s.substring(indices[0], indices[1] + 1);
     }
 
     public static void main(String[] args) {
